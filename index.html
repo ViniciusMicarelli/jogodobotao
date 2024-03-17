@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Botão</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button id="button" class="button3D"><span id="score">0</span></button> <!-- Adicionado o span para exibir a pontuação -->
+        <div class="score-container">
+            <div class="score-info">
+                <div class="score-label">Pontuação Máxima:</div>
+                <div id="max-score" class="score-value">0</div>
+            </div>
+            <div class="score-info">
+                <div class="score-label">Chance de Reset:</div>
+                <div id="reset-chance" class="score-value">0%</div>
+            </div>
+        </div>
+        <button id="auto-click-toggle">Ativar Clique Automático</button> <!-- Botão para ativar/desativar o clique automático -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

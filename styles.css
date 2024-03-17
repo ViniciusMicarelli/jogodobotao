@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    background: linear-gradient(135deg, #ff6e6e, #e52d2d, #ba0000); /* Fundo degradê */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Adiciona um fundo branco semi-transparente para melhorar a legibilidade */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.button3D {
+    width: 150px; /* Ajuste o tamanho do botão conforme necessário */
+    height: 150px; /* O botão agora será redondo, então a altura é igual à largura */
+    border-radius: 50%; /* Faz o botão ficar redondo */
+    background: linear-gradient(145deg, #ff6e6e, #e52d2d); /* Gradiente de cor para efeito 3D */
+    box-shadow: 6px 6px 12px #c84848, -6px -6px 12px #ff8484; /* Sombra para realçar o efeito 3D */
+    color: white; /* Ajuste a cor do texto conforme necessário */
+    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.button3D:active {
+    transform: translateY(4px);
+}
+
+.button3D:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: inherit;
+    transform: translateZ(-4px);
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.score-info {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.score-label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.score-value {
+    font-size: 16px;
+    color: #555;
+}
+
+
+#auto-click-toggle {
+    width: 200px; /* Ajuste o tamanho do botão conforme necessário */
+    height: 50px; /* Ajuste a altura do botão conforme necessário */
+    color: white; /* Cor do texto branco */
+    font-size: 18px; /* Tamanho da fonte */
+    border: none; /* Remova a borda */
+    border-radius: 10px; /* Adicione bordas arredondadas */
+    cursor: pointer; /* Altere o cursor ao passar o mouse */
+    margin-top: 20px; /* Espaçamento superior */
+    transition: background-color 0.3s; /* Efeito de transição */
+    background-color: #4CAF50; /* Cor de fundo verde padrão */
+}
+
+#auto-click-toggle.active {
+    background: linear-gradient(135deg, #ff6e6e, #e52d2d, #ba0000); /* Degradê vermelho do fundo */
+}
+
+#auto-click-toggle:hover:not(.active) {
+    background-color: #45a049; /* Altera a cor de fundo ao passar o mouse quando não estiver ativo */
+}
+
+#auto-click-toggle:active {
+    background-color: #3e8e41; /* Altera a cor de fundo quando clicado */
+}
