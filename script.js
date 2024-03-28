@@ -96,7 +96,7 @@ button.addEventListener('click', () => {
 autoClickToggleButton.addEventListener('click', () => {
     if (!autoClickActive) {
         autoClickActive = true;
-        autoClickInterval = setInterval(simulateButtonClick, 10);
+        autoClickInterval = setInterval(simulateButtonClick, 100);
         autoClickToggleButton.textContent = 'Desativar Clique Automático';
         autoClickToggleButton.classList.add('active'); // Adiciona a classe "active"
     } else {
